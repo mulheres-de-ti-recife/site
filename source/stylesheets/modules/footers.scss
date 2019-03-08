@@ -2,4 +2,16 @@
 // Footers                                      (Module) //
 ///////////////////////////////////////////////////////////
 
-footer { margin-bottom: $gutter-biggest; }
+footer {
+  margin: $gutter-big 0 $gutter-medium;
+  img {
+    width: 50px;
+    height: auto;
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+}

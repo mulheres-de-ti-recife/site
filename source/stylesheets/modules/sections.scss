@@ -7,23 +7,17 @@
   padding-bottom: $gutter-bigger;
   h2 { max-width: 850px; }
   p  { max-width: 800px; }
-  &.is-yellow { background-color: $yellow; }
-  &.is-purple {
-    background-color: $purple;
-    color: $white;
-    h2, h3 { color: $yellow; }
-  }
-  &.is-gray {
-    background-color: $gray-light;
-    color: $gray;
-  }
 
   // Project section
   &.project {
+    padding-bottom: 4rem;
     h2 { margin-bottom: $gutter-bigger; }
     img {
-      width: 300px;
+      width: 250px;
       height: auto;
+      position: absolute;
+      right: 0;
+      bottom: -$gutter-medium;
     }
     .divisor-line {
       width: $gutter-big;
@@ -59,7 +53,23 @@
     .informations {
       display: flex;
       justify-content: space-between;
-      li { width: 45%; }
+      > li { width: 45%; }
+    }
+    .logos {
+      display: flex;
+      align-items: center;
+      margin-top: $gutter-regular;
+      li {
+        &:not(:last-child) { margin-right: $gutter-regular; }
+        &:first-child { margin-top: $gutter-small; }
+      }
+    }
+    .logo {
+      height: auto;
+      opacity: .8;
+      .guava    { width: 92px; }
+      .labcodes { width: 108px; }
+      .vinta    { width: 96px; }
     }
   }
 }
