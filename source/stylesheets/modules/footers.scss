@@ -2,6 +2,8 @@
 // Footers                                      (Module) //
 ///////////////////////////////////////////////////////////
 
+@import "../core/scale";
+
 footer {
   margin: 0 0 $gutter-medium;
   @media (min-width: breakpoints(tablet)) { margin: $gutter-big 0 $gutter-medium; }

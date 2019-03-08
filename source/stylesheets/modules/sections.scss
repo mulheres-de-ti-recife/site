@@ -2,6 +2,14 @@
 // Sections                                     (Module) //
 ///////////////////////////////////////////////////////////
 
+@import "../core/mixins";
+@import "../core/scale";
+@import "../core/colors";
+@import "../core/typography";
+@import "../core/buttons";
+@import "../core/globals";
+@import "../core/grid";
+
 .section {
   padding-top: $gutter-bigger;
   padding-bottom: $gutter-bigger;
