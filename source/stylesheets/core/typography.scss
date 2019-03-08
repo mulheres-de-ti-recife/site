@@ -28,26 +28,21 @@ h1, h2, h3, p {
   padding: 0;
 }
 h2 {
-  font-size: size(big);
+  font-size: size(medium);
   margin-bottom: $gutter-regular;
+  @media (min-width: breakpoints(tablet)) { font-size: size(big); }
 }
 h3 {
-  font-size: size(small);
+  font-size: size(smaller);
   letter-spacing: 1.33px;
   text-transform: uppercase;
   margin-bottom: $gutter-small;
+  @media (min-width: breakpoints(tablet)) { font-size: size(small); }
 }
 
 // Paragraph
 p { font-size: size(small); }
 strong { font-weight: $bold; }
-
-// Link
-a {
-  // &:visited {}
-  // &:focus {}
-  // &:hover {}
-}
 
 // Small texts
 small {

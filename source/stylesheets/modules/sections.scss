@@ -10,14 +10,24 @@
 
   // Project section
   &.project {
-    padding-bottom: 4rem;
-    h2 { margin-bottom: $gutter-bigger; }
+    padding-bottom: $gutter-bigger;
+    @media (min-width: breakpoints(tablet)) { padding-bottom: 4rem; }
+    h2 {
+      margin-bottom: $gutter-medium;
+      @media (min-width: breakpoints(tablet)) { margin-bottom: $gutter-bigger; }
+    }
     img {
-      width: 250px;
+      width: 180px;
       height: auto;
-      position: absolute;
-      right: 0;
-      bottom: -$gutter-medium;
+      margin: $gutter-medium auto 0;
+      display: block;
+      @media (min-width: breakpoints(notebook)) {
+        position: absolute;
+        right: 0;
+        bottom: -$gutter-medium;
+        width: 250px;
+        margin: 0;
+      }
     }
     .divisor-line {
       width: $gutter-big;
@@ -33,13 +43,21 @@
     img {
       margin: $gutter-bigger auto;
       width: 400px;
+      max-width: 90%;
       height: auto;
       display: block;
     }
     .principles {
       display: flex;
       justify-content: space-between;
-      li { width: 30%; }
+      flex-wrap: wrap;
+      li {
+        &:not(:last-child) { margin-bottom: $gutter-regular; }
+        @media (min-width: breakpoints(tablet)) {
+          width: 30%;
+          &:not(:last-child) { margin-bottom: 0; }
+        }
+      }
     }
   }
 
@@ -53,15 +71,32 @@
     .informations {
       display: flex;
       justify-content: space-between;
-      > li { width: 45%; }
+      flex-wrap: wrap;
+      > li {
+        &:first-child { margin-bottom: $gutter-regular; }
+        @media (min-width: breakpoints(tablet)) {
+          width: 45%;
+          &:first-child { margin-bottom: 0; }
+        }
+      }
     }
     .logos {
       display: flex;
       align-items: center;
       margin-top: $gutter-regular;
+      flex-wrap: wrap;
       li {
-        &:not(:last-child) { margin-right: $gutter-regular; }
-        &:first-child { margin-top: $gutter-small; }
+        width: 100%;
+        margin-bottom: 20px;
+        @media (min-width: breakpoints(tablet)) {
+          width: auto;
+          margin-bottom: 0;
+          &:not(:last-child) { margin-right: .9rem; }
+        }
+        @media (min-width: breakpoints(notebook)) {
+          &:not(:last-child) { margin-right: $gutter-regular; }
+          &:first-child { margin-top: $gutter-small; }
+        }
       }
     }
     .logo {

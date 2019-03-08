@@ -3,10 +3,15 @@
 ///////////////////////////////////////////////////////////
 
 footer {
-  margin: $gutter-big 0 $gutter-medium;
+  margin: 0 0 $gutter-medium;
+  @media (min-width: breakpoints(tablet)) { margin: $gutter-big 0 $gutter-medium; }
   img {
     width: 50px;
     height: auto;
+  }
+  article {
+    width: 80%;
+    @media (min-width: breakpoints(tablet)) { width: unset; }
   }
   .content {
     display: flex;

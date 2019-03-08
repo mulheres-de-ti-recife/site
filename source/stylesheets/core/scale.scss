@@ -6,15 +6,24 @@
 $base:      20px;
 
 $size: (
-  big:      1.7rem, // 34
-  base:     $base,  // 20
-  regular:  .9rem,  // 18
-  small:    .8rem,  // 16
-  smaller:  .7rem,  // 14
+  big:      1.7rem,  // 34
+  medium:   1.25rem, // 25
+  base:     $base,   // 20
+  regular:  .9rem,   // 18
+  small:    .8rem,   // 16
+  smaller:  .7rem,   // 14
+);
+
+// Breakpoints
+$breakpoints: (
+  "phone":     28.8rem, // 576
+  "tablet":    38.4rem, // 768
+  "notebook":  49.6rem, // 992
+  "desktop":   64rem,   // 1280
 );
 
 @function size($size-number: regular) { @return map-get($size, $size-number); }
-@function size-alt($size-number: regular) { @return map-get($size-alt, $size-number); }
+@function breakpoints($size-number: regular) { @return map-get($breakpoints, $size-number); }
 
 $gutter-biggest:     5rem;              // 100
 $gutter-bigger:      size(base) * 3;    //  60
@@ -25,13 +34,6 @@ $gutter-small-alt:   .6rem;             //  12
 $gutter-small:       size(base) / 2;    //  10
 $gutter-tiny:        size(base) / 5;    //   4
 
-// Breakpoints
-$breakpoints: (
-  "phone":     20rem,
-  "tablet":    51rem,
-  "notebook":  68rem,
-  "desktop":   80rem
-);
 
 // Grid options
 $columns:      12;

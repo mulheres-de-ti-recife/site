@@ -5,8 +5,8 @@
 .grid {
   &.content {
     box-sizing: border-box;
-    padding-right: $gutter-small;
-    padding-left: $gutter-small;
+    padding-right: .75rem;
+    padding-left: .75rem;
     width: 100%;
     max-width: 1100px;
     margin: 0 auto;
