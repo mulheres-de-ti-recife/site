@@ -1,0 +1,49 @@
+///////////////////////////////////////////////////////////
+// Typography                               (Core block) //
+///////////////////////////////////////////////////////////
+
+// Font scaffold //////////////////////////////////////////
+
+// Weights
+$normal:       normal;
+$regular:      $normal;
+$bold:         700;
+
+// Font system ////////////////////////////////////////////
+
+html, body {
+  font-family: 'Rubik', sans-serif;
+}
+
+// Title
+h1 {}
+h2 {}
+h3 {}
+h4 {}
+h5 {}
+
+// Paragraph
+p {}
+label {}
+strong {}
+blockquote {}
+::selection {}
+
+// Link
+a {
+  &:visited {}
+  &:focus {}
+  &:hover {}
+}
+
+// Small texts
+small {}
+legend {}
+figcaption {}
+
+// List
+ul {}
+ol {}
+li {}
+dl {}
+dl {}
