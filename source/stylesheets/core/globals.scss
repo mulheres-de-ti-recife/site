@@ -2,13 +2,14 @@
 // Global HTML & classes                    (Core block) //
 ///////////////////////////////////////////////////////////
 
-html, body {}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-header {}
-footer {}
-section {}
-
-form {}
-fieldset {}
-
-hr {}
+hr {
+  border-color: $purple;
+  opacity: .2;
+  margin: 0 0 $gutter-medium;
+}

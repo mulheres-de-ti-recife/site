@@ -13,37 +13,40 @@ $bold:         700;
 
 html,
 body {
-  color: $text-base;
+  color: $purple;
   font-family: 'Rubik', sans-serif;
   font-size: size(base);
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
 
+button {font-family: 'Rubik', sans-serif;}
+
 // Title
 h1, h2, h3, p {
   margin: 0;
   padding: 0;
 }
-
-h2 { font-size: size(big); }
+h2 {
+  font-size: size(big);
+  margin-bottom: $gutter-regular;
+}
 h3 {
   font-size: size(small);
   letter-spacing: 1.33;
   text-transform: uppercase;
+  margin-bottom: $gutter-small;
 }
 
 // Paragraph
 p { font-size: size(small); }
 strong { font-weight: $bold; }
-blockquote {}
-::selection {}
 
 // Link
 a {
-  &:visited {}
-  &:focus {}
-  &:hover {}
+  // &:visited {}
+  // &:focus {}
+  // &:hover {}
 }
 
 // Small texts

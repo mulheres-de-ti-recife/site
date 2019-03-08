@@ -19,13 +19,11 @@ $size: (
 $gutter-biggest:     5rem;              // 100
 $gutter-bigger:      size(base) * 3;    //  60
 $gutter-big:         size(base) * 2;    //  40
-$gutter-medium:      size(bigger);      //  30
-$gutter-regular-alt: size(base) * 1.25; //  25
-$gutter-regular:     size(base);        //  20
+$gutter-medium:      1.5rem;            //  30
+$gutter-regular:     size(base) * 1.25; //  25
 $gutter-small-alt:   size(small);       //  15
 $gutter-small:       size(base) / 2;    //  10
-$gutter-tiny:        size(base) / 4;    //   5
-$gutter-micro:       size(micro);       //   1
+$gutter-tiny:        size(base) / 5;    //   4
 
 // Breakpoints
 $breakpoints: (

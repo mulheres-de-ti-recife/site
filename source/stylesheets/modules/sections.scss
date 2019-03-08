@@ -1,0 +1,65 @@
+///////////////////////////////////////////////////////////
+// Sections                                     (Module) //
+///////////////////////////////////////////////////////////
+
+.section {
+  padding-top: $gutter-bigger;
+  padding-bottom: $gutter-bigger;
+  h2 { max-width: 850px; }
+  p  { max-width: 800px; }
+  &.is-yellow { background-color: $yellow; }
+  &.is-purple {
+    background-color: $purple;
+    color: $white;
+    h2, h3 { color: $yellow; }
+  }
+  &.is-gray {
+    background-color: $gray-light;
+    color: $gray;
+  }
+
+  // Project section
+  &.project {
+    h2 { margin-bottom: $gutter-bigger; }
+    img {
+      width: 300px;
+      height: auto;
+    }
+    .divisor-line {
+      width: $gutter-big;
+      height: .1rem;
+      display: block;
+      background-color: $white;
+      margin-bottom: $gutter-medium;
+    }
+  }
+
+  // Brochure section
+  &.brochure {
+    img {
+      margin: $gutter-bigger auto;
+      width: 400px;
+      height: auto;
+      display: block;
+    }
+    .principles {
+      display: flex;
+      justify-content: space-between;
+      li { width: 30%; }
+    }
+  }
+
+  // Research section
+  &.research {
+    h2 { margin-bottom: $gutter-small; }
+  }
+
+  // Know-more section
+  &.know-more {
+    .informations {
+      display: flex;
+      justify-content: space-between;
+      li { width: 45%; }
+    }
+  }
+}

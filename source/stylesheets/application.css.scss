@@ -8,14 +8,13 @@
 // @import "vendor/…";
 
 // Core blocks ......... Foundational UI building blocks //
-@import "core/mixins";           // Mixins & functions
-@import "core/scale";            // Modular scale, if needed
-@import "core/colors";           // Color variables
-@import "core/typography";       // Typography system
-@import "core/typography/files"; // Font import, if needed
-@import "core/inputs";           // Inputs, selects & labels
-@import "core/buttons";          // All sorts of buttons
-@import "core/globals";          // Global HTML & classes
+@import "core/mixins";        // Mixins & functions
+@import "core/scale";         // Modular scale, if needed
+@import "core/colors";        // Color variables
+@import "core/typography";    // Typography system
+@import "core/buttons";       // All sorts of buttons
+@import "core/globals";       // Global HTML & classes
+@import "core/grid";          // Grid system
 
 // Vendors overwrites ........... Third-party overwrites //
 // @import "vendor/overwrites/…";
@@ -26,4 +25,4 @@
 @import "modules/sidebars";
 @import "modules/tabs";
 @import "modules/topbars";
-
+@import "modules/sections";
