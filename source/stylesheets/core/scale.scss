@@ -3,14 +3,29 @@
 ///////////////////////////////////////////////////////////
 
 // Base size (1rem)
-$base:         16px;
+$base:      20px;
 
-// Modular Scale
-// www.modularscale.com
-$modularscale: (
-  base:        1rem,
-  ratio:       1.4
+$size: (
+  big:      1.7rem, // 34
+  base:     $base,  // 20
+  regular:  .9rem,  // 18
+  small:    .8rem,  // 16
+  smaller:  .7rem,  // 14
 );
+
+@function size($size-number: regular) { @return map-get($size, $size-number); }
+@function size-alt($size-number: regular) { @return map-get($size-alt, $size-number); }
+
+$gutter-biggest:     5rem;              // 100
+$gutter-bigger:      size(base) * 3;    //  60
+$gutter-big:         size(base) * 2;    //  40
+$gutter-medium:      size(bigger);      //  30
+$gutter-regular-alt: size(base) * 1.25; //  25
+$gutter-regular:     size(base);        //  20
+$gutter-small-alt:   size(small);       //  15
+$gutter-small:       size(base) / 2;    //  10
+$gutter-tiny:        size(base) / 4;    //   5
+$gutter-micro:       size(micro);       //   1
 
 // Breakpoints
 $breakpoints: (

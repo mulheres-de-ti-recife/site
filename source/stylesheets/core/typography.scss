@@ -11,21 +11,31 @@ $bold:         700;
 
 // Font system ////////////////////////////////////////////
 
-html, body {
+html,
+body {
+  color: $text-base;
   font-family: 'Rubik', sans-serif;
+  font-size: size(base);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
 }
 
 // Title
-h1 {}
-h2 {}
-h3 {}
-h4 {}
-h5 {}
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+
+h2 { font-size: size(big); }
+h3 {
+  font-size: size(small);
+  letter-spacing: 1.33;
+  text-transform: uppercase;
+}
 
 // Paragraph
-p {}
-label {}
-strong {}
+p { font-size: size(small); }
+strong { font-weight: $bold; }
 blockquote {}
 ::selection {}
 
@@ -37,13 +47,12 @@ a {
 }
 
 // Small texts
-small {}
-legend {}
-figcaption {}
+small {
+  display: block;
+  font-size: size(smaller);
+  font-style: italic;
+}
 
-// List
-ul {}
-ol {}
-li {}
-dl {}
-dl {}
+.text {
+  &.bigger { font-size: size(regular); }
+}
