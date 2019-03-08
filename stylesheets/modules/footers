@@ -1,0 +1,18 @@
+footer {
+  margin: 0 0 1.5rem; }
+  @media (min-width: 38.4rem) {
+    footer {
+      margin: 40px 0 1.5rem; } }
+  footer img {
+    width: 50px;
+    height: auto; }
+  footer article {
+    width: 80%; }
+    @media (min-width: 38.4rem) {
+      footer article {
+        width: unset; } }
+  footer .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center; }
