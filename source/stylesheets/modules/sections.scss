@@ -1,0 +1,75 @@
+///////////////////////////////////////////////////////////
+// Sections                                     (Module) //
+///////////////////////////////////////////////////////////
+
+.section {
+  padding-top: $gutter-bigger;
+  padding-bottom: $gutter-bigger;
+  h2 { max-width: 850px; }
+  p  { max-width: 800px; }
+
+  // Project section
+  &.project {
+    padding-bottom: 4rem;
+    h2 { margin-bottom: $gutter-bigger; }
+    img {
+      width: 250px;
+      height: auto;
+      position: absolute;
+      right: 0;
+      bottom: -$gutter-medium;
+    }
+    .divisor-line {
+      width: $gutter-big;
+      height: .1rem;
+      display: block;
+      background-color: $white;
+      margin-bottom: $gutter-medium;
+    }
+  }
+
+  // Brochure section
+  &.brochure {
+    img {
+      margin: $gutter-bigger auto;
+      width: 400px;
+      height: auto;
+      display: block;
+    }
+    .principles {
+      display: flex;
+      justify-content: space-between;
+      li { width: 30%; }
+    }
+  }
+
+  // Research section
+  &.research {
+    h2 { margin-bottom: $gutter-small; }
+  }
+
+  // Know-more section
+  &.know-more {
+    .informations {
+      display: flex;
+      justify-content: space-between;
+      > li { width: 45%; }
+    }
+    .logos {
+      display: flex;
+      align-items: center;
+      margin-top: $gutter-regular;
+      li {
+        &:not(:last-child) { margin-right: $gutter-regular; }
+        &:first-child { margin-top: $gutter-small; }
+      }
+    }
+    .logo {
+      height: auto;
+      opacity: .8;
+      .guava    { width: 92px; }
+      .labcodes { width: 108px; }
+      .vinta    { width: 96px; }
+    }
+  }
+}

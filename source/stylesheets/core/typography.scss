@@ -1,0 +1,71 @@
+///////////////////////////////////////////////////////////
+// Typography                               (Core block) //
+///////////////////////////////////////////////////////////
+
+// Font scaffold //////////////////////////////////////////
+
+// Weights
+$normal:       normal;
+$regular:      $normal;
+$bold:         700;
+
+// Font system ////////////////////////////////////////////
+
+html,
+body {
+  color: $purple;
+  font-family: 'Rubik', sans-serif;
+  font-size: size(base);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {font-family: 'Rubik', sans-serif;}
+
+// Title
+h1, h2, h3, p {
+  margin: 0;
+  padding: 0;
+}
+h2 {
+  font-size: size(big);
+  margin-bottom: $gutter-regular;
+}
+h3 {
+  font-size: size(small);
+  letter-spacing: 1.33px;
+  text-transform: uppercase;
+  margin-bottom: $gutter-small;
+}
+
+// Paragraph
+p { font-size: size(small); }
+strong { font-weight: $bold; }
+
+// Link
+a {
+  // &:visited {}
+  // &:focus {}
+  // &:hover {}
+}
+
+// Small texts
+small {
+  display: block;
+  font-size: size(smaller);
+  font-style: italic;
+}
+
+.text {
+  &.bigger { font-size: size(regular); }
+}
+
+.hidden-text {
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999em;
+}

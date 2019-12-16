@@ -1,0 +1,38 @@
+///////////////////////////////////////////////////////////
+// Scale & measurements                     (Core block) //
+///////////////////////////////////////////////////////////
+
+// Base size (1rem)
+$base:      20px;
+
+$size: (
+  big:      1.7rem, // 34
+  base:     $base,  // 20
+  regular:  .9rem,  // 18
+  small:    .8rem,  // 16
+  smaller:  .7rem,  // 14
+);
+
+@function size($size-number: regular) { @return map-get($size, $size-number); }
+@function size-alt($size-number: regular) { @return map-get($size-alt, $size-number); }
+
+$gutter-biggest:     5rem;              // 100
+$gutter-bigger:      size(base) * 3;    //  60
+$gutter-big:         size(base) * 2;    //  40
+$gutter-medium:      1.5rem;            //  30
+$gutter-regular:     size(base) * 1.25; //  25
+$gutter-small-alt:   .6rem;             //  12
+$gutter-small:       size(base) / 2;    //  10
+$gutter-tiny:        size(base) / 5;    //   4
+
+// Breakpoints
+$breakpoints: (
+  "phone":     20rem,
+  "tablet":    51rem,
+  "notebook":  68rem,
+  "desktop":   80rem
+);
+
+// Grid options
+$columns:      12;
+$gutter:       1rem;
