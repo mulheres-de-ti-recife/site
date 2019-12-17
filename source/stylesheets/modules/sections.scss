@@ -5,13 +5,16 @@
 .section {
   padding-top: $gutter-bigger;
   padding-bottom: $gutter-bigger;
-  h2 { max-width: 850px; }
+  h2 { max-width: 800px; }
   p  { max-width: 800px; }
 
   // Project section
   &.project {
     padding-bottom: 4rem;
-    h2 { margin-bottom: $gutter-bigger; }
+    h2 {
+      line-height: 2.4rem;
+      margin-bottom: $gutter-bigger;
+    }
     img {
       width: 250px;
       height: auto;
