@@ -7,6 +7,7 @@
 // Weights
 $normal:       normal;
 $regular:      $normal;
+$medium:       500;
 $bold:         700;
 
 // Font system ////////////////////////////////////////////
@@ -43,10 +44,16 @@ p { font-size: size(small); }
 strong { font-weight: $bold; }
 
 // Link
-a {
-  // &:visited {}
-  // &:focus {}
-  // &:hover {}
+a, .link {
+  @include transition;
+  background-color: transparent;
+  border: none;
+  font-size: size(small);
+  color: $purple;
+  font-weight: $medium;
+  padding: 0;
+  cursor: pointer;
+  &:hover, &:active { text-shadow: 0 0 .5px currentColor, 0 0 .5px currentColor; }
 }
 
 // Small texts
@@ -56,9 +63,7 @@ small {
   font-style: italic;
 }
 
-.text {
-  &.bigger { font-size: size(regular); }
-}
+.text.bigger { font-size: size(regular); }
 
 .hidden-text {
   position: absolute;

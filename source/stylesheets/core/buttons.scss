@@ -2,7 +2,7 @@
 // Buttons                                  (Core block) //
 ///////////////////////////////////////////////////////////
 
-button, input[type="button"], .button {
+button:not(.link), input[type="button"], .button {
   @include transition;
   font-size: size(smaller);
   color: $white;
