@@ -3,8 +3,7 @@
 ///////////////////////////////////////////////////////////
 
 .section {
-  padding-top: $gutter-bigger;
-  padding-bottom: $gutter-bigger;
+  padding: $gutter-bigger 0;
   h2 { max-width: 800px; }
   p  { max-width: 800px; }
 
@@ -13,7 +12,7 @@
     padding-bottom: 4rem;
     h2 {
       line-height: 2.4rem;
-      margin-bottom: $gutter-bigger;
+      margin-bottom: $gutter-huge;
     }
     img {
       width: 250px;

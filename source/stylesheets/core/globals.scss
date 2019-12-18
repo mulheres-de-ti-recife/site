@@ -2,20 +2,7 @@
 // Global HTML & classes                    (Core block) //
 ///////////////////////////////////////////////////////////
 
-body {
-  margin: 0;
-  min-width: 1000px;
-}
-
-header {
-  img {
-    width: 200px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-    padding-top: 40px;
-  }
-}
+body { margin: 0; }
 
 ul {
   list-style: none;

@@ -16,6 +16,7 @@ $size: (
 @function size($size-number: regular) { @return map-get($size, $size-number); }
 @function size-alt($size-number: regular) { @return map-get($size-alt, $size-number); }
 
+$gutter-huge:        7rem;              // 140
 $gutter-biggest:     5rem;              // 100
 $gutter-bigger:      size(base) * 3;    //  60
 $gutter-big:         size(base) * 2;    //  40

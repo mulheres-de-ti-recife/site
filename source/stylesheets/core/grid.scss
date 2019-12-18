@@ -2,14 +2,37 @@
 // Grid                                     (Core block) //
 ///////////////////////////////////////////////////////////
 
+// Breakpoints
+$breakpoints: (
+  "phone":     320px,
+  "phablet":   570px,
+  "tablet":    767px,
+  "notebook":  1199px,
+  "desktop":   1399px,
+  "large":     1769px,
+);
+
+$aside-width: 300px;
+
+body {
+  @include media(">notebook") { min-width: 1000px; }
+}
+
 .grid {
+  &.aside {
+    @include media(">notebook") {
+      width: $aside-width;
+      height: 100%;
+      position: fixed;
+    }
+  }
   &.content {
     box-sizing: border-box;
-    padding-right: $gutter-small;
-    padding-left: $gutter-small;
-    width: 100%;
+    padding-right: $gutter-big;
+    padding-left: $gutter-big;
     max-width: 1100px;
     margin: 0 auto;
     position: relative;
+    @include media(">notebook") { margin-left: $aside-width; }
   }
 }
