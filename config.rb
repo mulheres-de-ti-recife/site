@@ -31,11 +31,23 @@ page '/*.txt', layout: false
 # Methods defined in the helpers block are available in templates
 # https://middlemanapp.com/basics/helper-methods/
 
-# helpers do
-#   def some_helper
-#     'Helping'
-#   end
-# end
+helpers do
+  def inline_svg(file_name, options = {})
+    asset = "source/images/#{file_name}.svg"
+    return error_svg(file_name) unless File.exists?(asset)
+
+    file = File.open(asset, 'r') { |f| f.read }
+    doc = Nokogiri::HTML::DocumentFragment.parse(file)
+
+    valid_attributes = %i(class role aria-labelledby)
+    valid_attributes.each do |attribute|
+      svg = doc.at_css('svg')
+      svg[attribute] = options[attribute] if options[attribute].present?
+    end
+
+    doc
+  end
+end
 
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
