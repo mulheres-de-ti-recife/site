@@ -26,14 +26,6 @@ $gutter-small-alt:   .6rem;             //  12
 $gutter-small:       size(base) / 2;    //  10
 $gutter-tiny:        size(base) / 5;    //   4
 
-// Breakpoints
-$breakpoints: (
-  "phone":     20rem,
-  "tablet":    51rem,
-  "notebook":  68rem,
-  "desktop":   80rem
-);
-
 // Grid options
 $columns:      12;
 $gutter:       1rem;

@@ -4,8 +4,10 @@
 
 .section {
   padding: $gutter-bigger 0;
-  h2 { max-width: 800px; }
-  p  { max-width: 800px; }
+  h2, p { max-width: 40rem; }
+  @include media(">huge") {
+    h2, p { max-width: 50rem; }
+  }
 
   // Project section
   &.project {
