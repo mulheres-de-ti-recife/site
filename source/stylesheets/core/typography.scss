@@ -33,6 +33,11 @@ h2 {
   margin-bottom: $gutter-regular;
 }
 h3 {
+  width: 100%;
+  font-size: size(medium);
+  margin-bottom: $gutter-regular;
+}
+h4 {
   font-size: size(small);
   letter-spacing: 1.33px;
   text-transform: uppercase;
@@ -40,7 +45,14 @@ h3 {
 }
 
 // Paragraph
-p { font-size: size(small); }
+p {
+  font-size: size(small);
+  line-height: 1.1rem;
+  &.bigger {
+    font-size: size(regular);
+    line-height: 25px;
+  }
+}
 strong { font-weight: $bold; }
 
 // Link
@@ -53,6 +65,9 @@ a, .link {
   font-weight: $medium;
   padding: 0;
   cursor: pointer;
+}
+
+.link {
   &:hover, &:active { text-shadow: 0 0 .5px currentColor, 0 0 .5px currentColor; }
 }
 
@@ -62,8 +77,6 @@ small {
   font-size: size(smaller);
   font-style: italic;
 }
-
-.text.bigger { font-size: size(regular); }
 
 .hidden-text {
   position: absolute;

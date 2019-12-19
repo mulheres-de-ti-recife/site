@@ -7,19 +7,27 @@ button:not(.link), input[type="button"], .button {
   font-size: size(smaller);
   color: $white;
   font-weight: $bold;
+  line-height: size(base);
   letter-spacing: 1.1px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  max-width: 15rem;
-  padding: $gutter-small-alt $gutter-small;
-  margin: $gutter-bigger auto 0;
+  padding: $gutter-small-alt 1rem;
   background-color: $pink;
   border: none;
   border-radius: $gutter-tiny;
-  display: block;
+  display: inline-block;
   &:focus, &:active, &:hover {
     background-color: darken($pink, 2%);
-    transform: scale(1.05);
+    transform: scale(1.03);
+  }
+}
+
+.button {
+  &.download {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    svg { margin-right: 1rem; }
   }
 }

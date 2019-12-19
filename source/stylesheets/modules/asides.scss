@@ -6,11 +6,7 @@ aside {
   background-color: $white;
   padding: 3.6rem $gutter-medium 0;
   box-sizing: border-box;
-  img {
-    width: 10rem;
-    height: auto;
-    display: block;
-  }
+  img { display: block; }
   header {
     display: flex;
     flex-wrap: wrap;
@@ -29,8 +25,6 @@ aside {
     position: relative;
     img {
       @include transition;
-      width: .6rem;
-      height: auto;
       opacity: 0;
       position: absolute;
       top: 50%;

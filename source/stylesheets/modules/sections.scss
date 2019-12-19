@@ -4,9 +4,9 @@
 
 .section {
   padding: $gutter-bigger 0;
-  h2, p { max-width: 40rem; }
-  @include media(">huge") {
-    h2, p { max-width: 50rem; }
+  h2, p {
+    max-width: 40rem;
+    @include media(">huge") { max-width: 50rem; }
   }
 
   // Project section
@@ -17,8 +17,6 @@
       margin-bottom: $gutter-huge;
     }
     img {
-      width: 12.5rem;
-      height: auto;
       position: absolute;
       right: 1rem;
       bottom: -$gutter-medium;
@@ -35,21 +33,38 @@
   // Brochure section
   &.brochure {
     img {
-      margin: $gutter-bigger auto;
-      width: 400px;
-      height: auto;
+      margin: $gutter-bigger 4rem $gutter-bigger 0;
       display: block;
     }
-    .principles {
+    .content {
       display: flex;
-      justify-content: space-between;
-      li { width: 30%; }
+      flex-wrap: wrap;
+      align-items: center;
     }
   }
 
   // Research section
   &.research {
-    h2 { margin-bottom: $gutter-small; }
+    img.progress { padding: $gutter-big 0 $gutter-bigger; }
+
+    .scope {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      .bullet-points {
+        width: calc(90% - 142px);
+        padding-right: 2rem;
+        box-sizing: border-box;
+      }
+    }
+
+    .button { margin: 0 auto; }
+
+    .results ul { margin: 1rem 0 2rem; }
+    @include media(">notebook") {
+      .results li:first-child { text-align: right; }
+    }
   }
 
   // Know-more section
@@ -68,12 +83,33 @@
         &:first-child { margin-top: $gutter-small; }
       }
     }
-    .logo {
-      height: auto;
-      opacity: .8;
-      .guava    { width: 92px; }
-      .labcodes { width: 108px; }
-      .vinta    { width: 96px; }
-    }
+    .logo { opacity: .8; }
+  }
+}
+
+.subsection {
+  padding-top: 2rem;
+  position: relative;
+}
+
+.bullet-points {
+  font-size: size(regular);
+  line-height: 25px;
+  list-style: disc;
+  padding-left: 1rem;
+  li { margin-bottom: 1rem; }
+}
+
+.paragraphs-wrapper {
+  max-width: 45rem;
+  width: 90%;
+}
+
+.paragraphs {
+  display: flex;
+  justify-content: space-between;
+  li {
+    width: 100%;
+    &:not(:first-child) { padding-left: 2rem; }
   }
 }
