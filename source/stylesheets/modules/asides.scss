@@ -3,18 +3,24 @@
 ///////////////////////////////////////////////////////////
 
 aside {
-  padding: 3.6rem $gutter-medium 0;
+  padding: $gutter-medium $gutter-medium;
   box-sizing: border-box;
-  @include media(">notebook") { background-color: $white; }
+  @include media(">notebook") {
+    padding: 3.6rem $gutter-medium 0;
+    background-color: $white;
+  }
   img { display: block; }
   header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-end;
+    justify-content: space-between;
+    @include media(">notebook") { justify-content: flex-end; }
   }
   ul {
     text-align: right;
     margin-top: $gutter-medium;
+    display: none;
+    @include media(">notebook") { display: block; }
   }
   li {
     margin-bottom: $gutter-small-alt;

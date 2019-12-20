@@ -4,30 +4,37 @@
 
 button:not(.link), input[type="button"], .button {
   @include transition;
-  font-size: size(smaller);
-  color: $white;
-  font-weight: $bold;
-  line-height: size(base);
-  letter-spacing: 1.1px;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  padding: $gutter-small-alt 1rem;
-  background-color: $pink;
   border: none;
-  border-radius: $gutter-tiny;
   display: inline-block;
-  &:focus, &:active, &:hover {
-    background-color: darken($pink, 2%);
-    transform: scale(1.03);
-  }
+  background-color: transparent;
 }
 
 .button {
   &.download {
     display: flex;
+    font-size: size(smaller);
+    font-weight: $bold;
+    line-height: size(base);
+    letter-spacing: 1.1px;
+    color: $white;
+    padding: $gutter-small-alt 1rem;
+    border-radius: $gutter-tiny;
     align-items: center;
     width: fit-content;
+    background-color: $pink;
     svg { margin-right: 1rem; }
+    &:focus, &:active, &:hover {
+      background-color: darken($pink, 2%);
+      transform: scale(1.03);
+    }
+  }
+  &.menu {
+    padding: .5rem;
+    margin-right: -.4rem;
+    svg { width: 1.8rem; }
+    @include media(">notebook") { display: none; }
   }
 }
