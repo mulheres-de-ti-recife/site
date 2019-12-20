@@ -3,9 +3,9 @@
 ///////////////////////////////////////////////////////////
 
 aside {
-  background-color: $white;
   padding: 3.6rem $gutter-medium 0;
   box-sizing: border-box;
+  @include media(">notebook") { background-color: $white; }
   img { display: block; }
   header {
     display: flex;

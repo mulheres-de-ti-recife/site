@@ -3,15 +3,21 @@
 ///////////////////////////////////////////////////////////
 
 .image {
+  max-width: 100%;
   height: auto;
   &.logo     { width: 10rem; }
-  &.women    { width: 12.5rem;; }
-  &.sparkles { width: .6rem; }
-  &.brochure { width: 18rem; }
-  &.progress { max-width: 36rem; }
+  &.women    { width: 10rem;; }
+  &.brochure { width: 12rem; }
+  &.progress { width: 13rem; }
   &.dices    { width: 7.1rem; }
-  &.guava    { width: 4.6rem; }
-  &.labcodes { width: 5.4rem; }
-  &.vinta    { width: 4.8rem; }
   &.feminism { width: 2.5rem; }
+  @include media(">notebook") {
+    &.logo     { width: 10rem; }
+    &.women    { width: 12.5rem;; }
+    &.sparkles { width: .6rem; }
+    &.brochure { width: 18rem; }
+    &.progress { width: 36rem; }
+    &.dices    { width: 7.1rem; }
+    &.feminism { width: 2.5rem; }
+  }
 }

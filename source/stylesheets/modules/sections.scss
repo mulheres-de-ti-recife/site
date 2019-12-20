@@ -3,7 +3,12 @@
 ///////////////////////////////////////////////////////////
 
 .section {
-  padding: $gutter-bigger 0;
+  padding: $gutter-medium 0;
+  margin-bottom: .75rem;
+  @include media(">notebook") {
+    padding: $gutter-bigger 0;
+    margin-bottom: 0;
+  }
   h2, p {
     max-width: 40rem;
     @include media(">huge") { max-width: 50rem; }
@@ -11,15 +16,22 @@
 
   // Project section
   &.project {
-    padding-bottom: 4rem;
+    @include media("<notebook") {
+      background-color: $white;
+      .highlighted-text { background-color: $yellow; }
+    }
+    @include media(">notebook") { padding-bottom: 4rem; }
+    article { position: relative; }
     h2 {
-      line-height: 2.4rem;
-      margin-bottom: $gutter-huge;
+      margin-bottom: $gutter-bigger;
+      @include media(">notebook") { margin-bottom: $gutter-huge; }
     }
     img {
-      position: absolute;
-      right: 1rem;
-      bottom: -$gutter-medium;
+      @include media(">notebook") {
+        position: absolute;
+        right: 1rem;
+        bottom: -$gutter-medium;
+      }
     }
     .divisor-line {
       width: $gutter-big;
@@ -27,14 +39,19 @@
       display: block;
       background-color: $white;
       margin-bottom: $gutter-medium;
+      @include media("<notebook") { background-color: $yellow; }
     }
   }
 
   // Brochure section
   &.brochure {
     img {
-      margin: $gutter-bigger 4rem $gutter-bigger 0;
+      margin: $gutter-medium 0;
       display: block;
+      @include media(">notebook") { margin: $gutter-bigger 4rem $gutter-bigger 0; }
+    }
+    .button {
+      @include media("<notebook") { margin-bottom: 1rem; }
     }
     .content {
       display: flex;
@@ -45,17 +62,22 @@
 
   // Research section
   &.research {
-    img.progress { padding: $gutter-big 0 $gutter-bigger; }
+    img.progress {
+      padding: $gutter-medium 0 1rem;
+      @include media(">notebook") { padding: $gutter-big 0 $gutter-bigger; }
+    }
 
     .scope {
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       justify-content: flex-start;
-      .bullet-points {
-        width: calc(90% - 142px);
-        padding-right: 2rem;
+      ul {
         box-sizing: border-box;
+        @include media(">notebook") {
+          width: calc(90% - 142px);
+          padding-right: 2rem;
+        }
       }
     }
 
@@ -69,29 +91,27 @@
 
   // Know-more section
   &.know-more {
-    .informations {
-      display: flex;
-      justify-content: space-between;
-      > li { width: 45%; }
-    }
+    @include media("<notebook") { background-color: $white; }
     .logos {
       display: flex;
       align-items: center;
       margin-top: $gutter-regular;
       li {
-        &:not(:last-child) { margin-right: $gutter-regular; }
         &:first-child { margin-top: $gutter-small; }
+        &:not(:first-child) { padding-left: 2rem; }
       }
     }
     .logo { opacity: .8; }
   }
 }
 
+// Subsection
 .subsection {
   padding-top: 2rem;
   position: relative;
 }
 
+// Bullet points
 .bullet-points {
   font-size: size(regular);
   line-height: 25px;
@@ -100,16 +120,21 @@
   li { margin-bottom: 1rem; }
 }
 
+// Paragraphs
 .paragraphs-wrapper {
   max-width: 45rem;
-  width: 90%;
+  @include media(">notebook") { width: 90%; }
 }
 
 .paragraphs {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  @include media(">notebook") { flex-wrap: nowrap; }
   li {
     width: 100%;
-    &:not(:first-child) { padding-left: 2rem; }
+    @include media(">notebook") {
+      &:not(:first-child) { padding-left: 2rem; }
+    }
   }
 }

@@ -21,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-button {font-family: 'Rubik', sans-serif;}
+button { font-family: 'Rubik', sans-serif; }
 
 // Title
 h1, h2, h3, p {
@@ -29,8 +29,14 @@ h1, h2, h3, p {
   padding: 0;
 }
 h2 {
-  font-size: size(big);
+  font-size: 1.3rem;
   margin-bottom: $gutter-regular;
+  &.has-highlight { line-height: 1.8rem; }
+  @include media(">notebook") {
+    font-size: size(big);
+    margin-bottom: $gutter-regular;
+    &.has-highlight { line-height: 2.4rem; }
+  }
 }
 h3 {
   width: 100%;
@@ -46,8 +52,12 @@ h4 {
 
 // Paragraph
 p {
-  font-size: size(small);
-  line-height: 1.1rem;
+  font-size: size(regular);
+  line-height: 25px;
+  @include media(">notebook") {
+    font-size: size(small);
+    line-height: 1.1rem;
+  }
   &.bigger {
     font-size: size(regular);
     line-height: 25px;

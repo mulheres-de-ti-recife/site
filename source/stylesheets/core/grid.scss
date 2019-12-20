@@ -5,7 +5,16 @@
 $aside-width: 14rem;
 
 body {
-  @include media(">notebook") { min-width: 50rem; }
+  background-color: $yellow;
+  @include media(">notebook") {
+    min-width: 50rem;
+    background-color: $white;
+  }
+}
+
+main {
+  padding: 0 .75rem;
+  @include media(">notebook") { padding: 0; }
 }
 
 .grid {
@@ -18,12 +27,18 @@ body {
   }
   &.content {
     box-sizing: border-box;
-    padding-right: $gutter-big;
-    padding-left: $gutter-big;
+    padding-right: 1rem;
+    padding-left: 1rem;
     max-width: 60rem;
     margin: 0 auto;
     position: relative;
+    @include media(">notebook") {
+      padding-right: $gutter-big;
+      padding-left: $gutter-big;
+    }
   }
-  &.wrapper { margin-left: 14rem; }
+  &.wrapper {
+    @include media(">notebook") { margin-left: 14rem; }
+  }
 }
 

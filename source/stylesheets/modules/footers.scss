@@ -3,7 +3,21 @@
 ///////////////////////////////////////////////////////////
 
 footer {
-  margin: $gutter-big 0 $gutter-medium;
+  @include media("<notebook") {
+    hr { display: none; }
+  }
+  @include media(">notebook") { margin: $gutter-big 0 $gutter-medium; }
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: $gutter-big;
+    p { width: 70%; }
+  }
+  img {
+    position: absolute;
+    right: $gutter-medium;
+    top: $gutter-big;
+  }
   .content {
     display: flex;
     justify-content: space-between;
