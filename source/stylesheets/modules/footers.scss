@@ -3,20 +3,22 @@
 ///////////////////////////////////////////////////////////
 
 footer {
-  @include media("<notebook") {
-    hr { display: none; }
-  }
+  margin: $gutter-medium 0 $gutter-medium;
   @include media(">notebook") { margin: $gutter-big 0 $gutter-medium; }
+  hr {
+    @include media("<notebook") { display: none; }
+  }
   article {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: $gutter-big;
-    p { width: 70%; }
   }
+  p { width: 70%; }
   img {
-    position: absolute;
-    right: $gutter-medium;
-    top: $gutter-big;
+    @include media("<notebook") {
+      position: absolute;
+      top: $gutter-medium;
+      right: $gutter-medium;
+    }
   }
   .content {
     display: flex;
