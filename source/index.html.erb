@@ -6,8 +6,11 @@ title: Mulheres de T.I. em Recife
   <header>
     <h1 class="hidden-text">Mulheres de T.I. em Recife</h1>
     <img class="image logo" src="images/logo-mulheres-de-ti-recife@2x.png" alt="">
-    <button class="button menu" type="button">
+    <button class="button menu" onclick="toggleMenuClass()" type="button">
       <%= inline_svg 'icon-menu', role: 'presentation' %>
+    </button>
+    <button class="button close" onclick="toggleMenuClass()" type="button">
+      <%= inline_svg 'icon-close', role: 'presentation' %>
     </button>
     <ul>
       <li>

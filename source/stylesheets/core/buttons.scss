@@ -37,4 +37,10 @@ button:not(.link), input[type="button"], .button {
     svg { width: 1.8rem; }
     @include media(">notebook") { display: none; }
   }
+  &.close {
+    position: absolute;
+    top: .6rem;
+    right: -$aside-width;
+    @include media(">notebook") { display: none; }
+  }
 }

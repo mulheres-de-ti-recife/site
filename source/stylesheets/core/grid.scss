@@ -13,6 +13,7 @@ body {
 }
 
 main {
+  @include transition(transform);
   padding: 0 .75rem;
   @include media(">notebook") { padding: 0; }
 }
@@ -38,7 +39,7 @@ main {
     }
   }
   &.wrapper {
-    @include media(">notebook") { margin-left: 14rem; }
+    @include media(">notebook") { margin-left: $aside-width; }
   }
 }
 

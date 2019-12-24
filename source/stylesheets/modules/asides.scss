@@ -2,7 +2,19 @@
 // Asides                                       (Module) //
 ///////////////////////////////////////////////////////////
 
+body.menu-is-open {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  @include media("<notebook") {
+    aside ul { display: block; }
+    aside, main { transform: translateX(-#{$aside-width}); }
+    header { overflow: visible; }
+  }
+}
+
 aside {
+  @include transition(transform);
   padding: $gutter-medium $gutter-medium;
   box-sizing: border-box;
   @include media(">notebook") {
@@ -14,21 +26,35 @@ aside {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
     @include media(">notebook") { justify-content: flex-end; }
   }
   ul {
     text-align: right;
     margin-top: $gutter-medium;
     display: none;
+    @include media("<notebook") {
+      position: absolute;
+      right: -15.5rem;
+      text-align: left;
+      width: $aside-width;
+      box-sizing: border-box;
+      padding: 0 .5rem;
+      margin-top: $gutter-huge;
+    }
     @include media(">notebook") { display: block; }
   }
   li {
-    margin-bottom: $gutter-small-alt;
+    margin-bottom: $gutter-medium;
+    @include media(">notebook") { margin-bottom: $gutter-small-alt; }
     &:nth-child(2) button { width: calc(100% - 1rem); }
   }
   button {
-    text-align: right;
+    text-align: left;
     position: relative;
+    @include media(">notebook") { text-align: right; }
     img {
       @include transition;
       opacity: 0;
