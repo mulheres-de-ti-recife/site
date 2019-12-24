@@ -47,6 +47,7 @@ h4 {
   font-size: size(small);
   letter-spacing: 1.33px;
   text-transform: uppercase;
+  margin-top: 0;
   margin-bottom: $gutter-small;
 }
 
@@ -70,11 +71,14 @@ a, .link {
   @include transition;
   background-color: transparent;
   border: none;
-  font-size: size(small);
+  font-size: size(base);
   color: $purple;
   font-weight: $medium;
   padding: 0;
   cursor: pointer;
+  @include media(">notebook") {
+    font-size: size(small);
+  }
 }
 
 .link {

@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////
 
 .section {
-  padding: $gutter-medium 0;
+  padding: $gutter-medium 0 $gutter-big;
   margin-bottom: .75rem;
   @include media(">notebook") {
     padding: $gutter-bigger 0;
@@ -24,18 +24,20 @@
     article { position: relative; }
     h2 {
       margin-bottom: $gutter-bigger;
-      @include media(">notebook") { margin-bottom: $gutter-huge; }
+      @include media(">desktop") { margin-bottom: $gutter-huge; }
     }
     img {
-      @include media(">notebook") {
+      margin-bottom: 1rem;
+      @include media(">desktop") {
         position: absolute;
         right: 1rem;
         bottom: -$gutter-medium;
+        margin-bottom: 0;
       }
     }
     .divisor-line {
       width: $gutter-big;
-      height: .1rem;
+      height: .15rem;
       display: block;
       background-color: $white;
       margin-bottom: $gutter-medium;
@@ -95,7 +97,7 @@
     .logos {
       display: flex;
       align-items: center;
-      margin-top: $gutter-regular;
+      margin: 1rem 0 $gutter-big;
       li {
         &:first-child { margin-top: $gutter-small; }
         &:not(:first-child) { padding-left: 2rem; }
