@@ -73,21 +73,15 @@ strong { font-weight: $bold; }
 // Link
 a, .link {
   @include transition;
-  background-color: transparent;
-  border: none;
   font-size: size(base);
   color: $purple;
   font-weight: $medium;
-  padding: 0;
-  cursor: pointer;
   text-decoration: none;
-  display: inline-block;
-  @include media(">notebook") {
-    font-size: size(small);
-  }
+  @include media(">notebook") { font-size: size(small); }
 }
 
 .link {
+  display: inline-block;
   &:hover, &:active, &.active { text-shadow: 0 0 .5px currentColor, 0 0 .5px currentColor; }
 }
 
