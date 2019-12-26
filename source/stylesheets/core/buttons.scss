@@ -41,6 +41,7 @@ button:not(.link), input[type="button"], .button {
     position: absolute;
     top: .6rem;
     right: -$aside-width;
+    @include media(">tablet") { right: -15.5rem; }
     @include media(">notebook") { display: none; }
   }
 }

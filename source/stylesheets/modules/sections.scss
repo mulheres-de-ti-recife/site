@@ -5,6 +5,10 @@
 .section {
   padding: $gutter-medium 0 $gutter-big;
   margin-bottom: .75rem;
+  @include media(">tablet") {
+    padding: 2rem 0 2.5rem;
+    margin-bottom: $gutter-tablet;
+  }
   @include media(">notebook") {
     padding: $gutter-bigger 0;
     margin-bottom: 0;
@@ -41,7 +45,7 @@
       display: block;
       background-color: $white;
       margin-bottom: $gutter-medium;
-      @include media("<notebook") { background-color: $yellow; }
+      @include media("<tablet") { background-color: $yellow; }
     }
   }
 
@@ -50,10 +54,10 @@
     img {
       margin: $gutter-medium 0;
       display: block;
-      @include media(">notebook") { margin: $gutter-bigger 4rem $gutter-bigger 0; }
+      @include media(">tablet") { margin: $gutter-bigger 4rem $gutter-bigger 0; }
     }
     .button {
-      @include media("<notebook") { margin-bottom: 2rem; }
+      @include media("<tablet") { margin-bottom: 2rem; }
     }
     .content {
       display: flex;
@@ -66,7 +70,7 @@
   &.research {
     img.progress {
       padding: $gutter-medium 0;
-      @include media(">notebook") { padding: $gutter-big 0 $gutter-bigger; }
+      @include media(">tablet") { padding: $gutter-big 0 $gutter-bigger; }
     }
 
     .scope {
@@ -76,7 +80,7 @@
       justify-content: flex-start;
       ul {
         box-sizing: border-box;
-        @include media(">notebook") {
+        @include media(">tablet") {
           width: calc(90% - 142px);
           padding-right: 2rem;
         }
@@ -85,11 +89,11 @@
 
     .button { margin: 0 auto; }
 
-    @include media("<notebook") {
+    @include media("<tablet") {
       .results > p { padding-bottom: 1.5rem; }
     }
 
-    @include media(">notebook") {
+    @include media(">tablet") {
       .results ul { margin: 1rem 0 2rem; }
       .results li:first-child { text-align: right; }
     }
@@ -104,12 +108,12 @@
       align-items: center;
       width: calc(100% - 1rem);
       margin-top: .8rem;
-      @include media(">notebook") { margin: 1rem 0 $gutter-big; }
+      @include media(">tablet") { margin: 1rem 0 $gutter-big; }
       li {
         &:first-child { margin-top: $gutter-small; }
         &:not(:first-child) {
           padding-left: .9rem;
-          @include media(">notebook") { padding-left: 2rem; }
+          @include media(">tablet") { padding-left: 2rem; }
         }
       }
     }
@@ -145,12 +149,12 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  @include media(">notebook") { flex-wrap: nowrap; }
+  @include media(">tablet") { flex-wrap: nowrap; }
   > li {
     width: 100%;
-    @include media("<notebook") { padding-bottom: $gutter-medium; }
+    @include media("<tablet") { padding-bottom: $gutter-medium; }
     &:not(:first-child) {
-      @include media(">notebook") { padding: 0 0 0 2rem; }
+      @include media(">tablet") { padding: 0 0 0 2rem; }
     }
   }
 }

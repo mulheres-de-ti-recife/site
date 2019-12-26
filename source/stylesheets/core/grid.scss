@@ -16,6 +16,7 @@ body {
 main {
   @include transition(transform);
   padding: 0 .75rem;
+  @include media(">tablet") { padding: 0 $gutter-tablet; }
   @include media(">notebook") { padding: 0; }
 }
 
@@ -34,9 +35,13 @@ main {
     max-width: 60rem;
     margin: 0 auto;
     position: relative;
+    @include media(">tablet") {
+      padding-right: $gutter-tablet;
+      padding-left: $gutter-tablet;
+    }
     @include media(">notebook") {
-      padding-right: $gutter-big;
-      padding-left: $gutter-big;
+      padding-right: $gutter-notebook;
+      padding-left: $gutter-notebook;
     }
   }
   &.wrapper {

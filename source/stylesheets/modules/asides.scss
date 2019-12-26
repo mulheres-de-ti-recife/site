@@ -15,8 +15,11 @@ body.menu-is-open {
 
 aside {
   @include transition(transform);
-  padding: $gutter-medium $gutter-medium;
+  padding: $gutter-medium;
   box-sizing: border-box;
+  @include media(">tablet") {
+    padding: $gutter-regular calc(#{$gutter-tablet} * 2);
+  }
   @include media(">notebook") {
     padding: 3.6rem $gutter-medium 0;
     background-color: $white;
@@ -44,6 +47,7 @@ aside {
       padding: 0 .5rem;
       margin-top: $gutter-huge;
     }
+    @include media(">tablet") { right: -16.5rem; }
     @include media(">notebook") { display: block; }
   }
   li {

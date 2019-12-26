@@ -13,9 +13,12 @@ footer {
     flex-wrap: wrap;
     max-width: calc(100% - 2.5rem);
   }
-  p { width: 70%; }
+  p {
+    width: 90%;
+    @include media(">notebook") { width: 70%; }
+  }
   img {
-    @include media("<notebook") {
+    @include media("<tablet") {
       position: absolute;
       top: $gutter-medium;
       right: $gutter-medium;

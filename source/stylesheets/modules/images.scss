@@ -15,7 +15,10 @@
     &.logo     { width: 10rem; }
     &.women    { width: 12.5rem;; }
     &.sparkles { width: .6rem; }
-    &.brochure { width: 18rem; }
+    &.brochure { width: 15rem; }
     &.progress { width: 36rem; }
+  }
+  @include media(">notebook") {
+    &.brochure { width: 18rem; }
   }
 }

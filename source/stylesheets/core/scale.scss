@@ -17,6 +17,8 @@ $size: (
 @function size($size-number: regular) { @return map-get($size, $size-number); }
 @function size-alt($size-number: regular) { @return map-get($size-alt, $size-number); }
 
+
+// Gutters
 $gutter-huge:        8rem;              // 160
 $gutter-biggest:     5rem;              // 100
 $gutter-bigger:      size(base) * 3;    //  60
@@ -27,9 +29,10 @@ $gutter-small-alt:   .6rem;             //  12
 $gutter-small:       size(base) / 2;    //  10
 $gutter-tiny:        size(base) / 5;    //   4
 
-// Grid options
-$columns:      12;
-$gutter:       1rem;
+// Semantic gutters
+$gutter-mobile:      .75rem;
+$gutter-tablet:      1.6rem;
+$gutter-notebook:    $gutter-big;
 
 // Breakpoints
 $breakpoints: (
