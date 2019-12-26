@@ -80,13 +80,15 @@ a, .link {
   font-weight: $medium;
   padding: 0;
   cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
   @include media(">notebook") {
     font-size: size(small);
   }
 }
 
 .link {
-  &:hover, &:active { text-shadow: 0 0 .5px currentColor, 0 0 .5px currentColor; }
+  &:hover, &:active, &.active { text-shadow: 0 0 .5px currentColor, 0 0 .5px currentColor; }
 }
 
 // Small texts

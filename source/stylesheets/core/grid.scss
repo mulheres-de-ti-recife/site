@@ -5,6 +5,7 @@
 $aside-width: 14rem;
 
 body {
+  @include transition;
   background-color: $yellow;
   @include media(">notebook") {
     min-width: 50rem;

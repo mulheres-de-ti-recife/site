@@ -49,9 +49,9 @@ aside {
   li {
     margin-bottom: $gutter-medium;
     @include media(">notebook") { margin-bottom: $gutter-small-alt; }
-    &:nth-child(2) button { width: calc(100% - 1rem); }
+    &:nth-child(2) a { width: calc(100% - 1rem); }
   }
-  button {
+  a {
     text-align: left;
     position: relative;
     @include media(">notebook") { text-align: right; }
