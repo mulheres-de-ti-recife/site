@@ -11,6 +11,7 @@ footer {
   article {
     display: flex;
     flex-wrap: wrap;
+    max-width: calc(100% - 2.5rem);
   }
   p { width: 70%; }
   img {

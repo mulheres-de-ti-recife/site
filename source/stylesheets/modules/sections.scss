@@ -53,7 +53,7 @@
       @include media(">notebook") { margin: $gutter-bigger 4rem $gutter-bigger 0; }
     }
     .button {
-      @include media("<notebook") { margin-bottom: 1rem; }
+      @include media("<notebook") { margin-bottom: 2rem; }
     }
     .content {
       display: flex;
@@ -65,7 +65,7 @@
   // Research section
   &.research {
     img.progress {
-      padding: $gutter-medium 0 1rem;
+      padding: $gutter-medium 0;
       @include media(">notebook") { padding: $gutter-big 0 $gutter-bigger; }
     }
 
@@ -85,25 +85,38 @@
 
     .button { margin: 0 auto; }
 
-    .results ul { margin: 1rem 0 2rem; }
+    @include media("<notebook") {
+      .results > p { padding-bottom: 1.5rem; }
+    }
+
     @include media(">notebook") {
+      .results ul { margin: 1rem 0 2rem; }
       .results li:first-child { text-align: right; }
     }
   }
 
   // Know-more section
   &.know-more {
+    padding-bottom: $gutter-small;
     @include media("<notebook") { background-color: $white; }
     .logos {
       display: flex;
       align-items: center;
-      margin: 1rem 0 $gutter-big;
+      width: calc(100% - 1rem);
+      margin-top: .8rem;
+      @include media(">notebook") { margin: 1rem 0 $gutter-big; }
       li {
         &:first-child { margin-top: $gutter-small; }
-        &:not(:first-child) { padding-left: 2rem; }
+        &:not(:first-child) {
+          padding-left: .9rem;
+          @include media(">notebook") { padding-left: 2rem; }
+        }
       }
     }
-    .logo { opacity: .8; }
+    .logo {
+      width: 100%;
+      opacity: .8;
+    }
   }
 }
 
@@ -133,10 +146,11 @@
   justify-content: space-between;
   flex-wrap: wrap;
   @include media(">notebook") { flex-wrap: nowrap; }
-  li {
+  > li {
     width: 100%;
-    @include media(">notebook") {
-      &:not(:first-child) { padding-left: 2rem; }
+    @include media("<notebook") { padding-bottom: $gutter-medium; }
+    &:not(:first-child) {
+      @include media(">notebook") { padding: 0 0 0 2rem; }
     }
   }
 }
