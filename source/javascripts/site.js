@@ -20,7 +20,7 @@ const links = document.querySelectorAll('[data-target-section]')
 
 function scrollListener() {
   const windowHeight = window.innerHeight
-  const offset = 50
+  const offset = 80
 
   const scrollY = window.scrollY + windowHeight - offset
 
