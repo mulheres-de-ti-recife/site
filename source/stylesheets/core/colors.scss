@@ -14,11 +14,11 @@ $gray-light:            #f2f2f2;
 
 .is-yellow { background-color: $yellow; }
 .is-purple {
-  background-color: $purple;
   color: $white;
+  background-color: $purple;
   h2, h3 { color: $yellow; }
 }
 .is-gray {
-  background-color: $gray-light;
   color: $purple;
+  background-color: $gray-light;
 }

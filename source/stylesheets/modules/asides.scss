@@ -15,37 +15,35 @@ body.menu-is-open {
 
 aside {
   @include transition(transform);
-  padding: $gutter-medium;
   box-sizing: border-box;
-  @include media(">tablet") {
-    padding: $gutter-regular calc(#{$gutter-tablet} * 2);
-  }
+  padding: $gutter-medium;
+  @include media(">tablet") { padding: $gutter-regular calc(#{$gutter-tablet} * 2); }
   @include media(">notebook") {
     padding: 3.6rem $gutter-medium 0;
     background-color: $white;
   }
   img { display: block; }
   header {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: space-between;
     overflow: hidden;
-    position: relative;
-    align-items: center;
     @include media(">notebook") { justify-content: flex-end; }
   }
   ul {
-    text-align: right;
-    margin-top: $gutter-medium;
     display: none;
+    margin-top: $gutter-medium;
+    text-align: right;
     @include media("<notebook") {
       position: absolute;
       right: -15.5rem;
-      text-align: left;
-      width: $aside-width;
       box-sizing: border-box;
+      width: $aside-width;
       padding: 0 .5rem;
       margin-top: $gutter-huge;
+      text-align: left;
     }
     @include media(">tablet") { right: -16.5rem; }
     @include media(">notebook") { display: block; }
@@ -56,16 +54,16 @@ aside {
     &:nth-child(2) a { width: calc(100% - 1rem); }
   }
   a {
-    text-align: left;
     position: relative;
+    text-align: left;
     @include media(">notebook") { text-align: right; }
     img {
       @include transition;
-      opacity: 0;
       position: absolute;
       top: 50%;
       left: -1rem;
       margin-top: -.9rem;
+      opacity: 0;
     }
     &:hover img,
     &:active img,

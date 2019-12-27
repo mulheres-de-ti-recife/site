@@ -3,7 +3,7 @@
 ///////////////////////////////////////////////////////////
 
 footer {
-  margin: $gutter-medium 0 $gutter-medium;
+  margin: $gutter-medium 0;
   @include media(">notebook") { margin: $gutter-big 0 $gutter-medium; }
   hr {
     @include media("<notebook") { display: none; }
@@ -26,8 +26,8 @@ footer {
   }
   .content {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
   }
 }

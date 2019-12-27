@@ -4,27 +4,27 @@
 
 button:not(.link), input[type="button"], .button {
   @include transition;
-  text-transform: uppercase;
-  text-decoration: none;
-  text-align: center;
-  border: none;
   display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
   background-color: transparent;
+  border: 0;
 }
 
 .button {
   &.download {
     display: flex;
-    font-size: size(smaller);
-    font-weight: $bold;
-    line-height: size(base);
-    letter-spacing: 1.1px;
-    color: $white;
-    padding: $gutter-small-alt 1rem;
-    border-radius: $gutter-tiny;
     align-items: center;
     width: fit-content;
+    padding: $gutter-small-alt 1rem;
+    color: $white;
+    font-weight: $bold;
+    font-size: size(smaller);
+    line-height: size(base);
+    letter-spacing: 1.1px;
     background-color: $pink;
+    border-radius: $gutter-tiny;
     svg { margin-right: 1rem; }
     &:focus, &:active, &:hover {
       background-color: darken($pink, 2%);

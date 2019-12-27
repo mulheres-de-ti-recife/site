@@ -40,11 +40,11 @@
       }
     }
     .divisor-line {
+      display: block;
       width: $gutter-big;
       height: .15rem;
-      display: block;
-      background-color: $white;
       margin-bottom: $gutter-medium;
+      background-color: $white;
       @include media("<tablet") { background-color: $yellow; }
     }
   }
@@ -52,8 +52,8 @@
   // Brochure section
   &.brochure {
     img {
-      margin: $gutter-medium 0;
       display: block;
+      margin: $gutter-medium 0;
       @include media(">tablet") { margin: $gutter-bigger 4rem $gutter-bigger 0; }
     }
     .button {
@@ -126,16 +126,16 @@
 
 // Subsection
 .subsection {
-  padding-top: 2rem;
   position: relative;
+  padding-top: 2rem;
 }
 
 // Bullet points
 .bullet-points {
+  padding-left: 1rem;
   font-size: size(regular);
   line-height: 25px;
   list-style: disc;
-  padding-left: 1rem;
   li { margin-bottom: 1rem; }
 }
 
@@ -147,8 +147,8 @@
 
 .paragraphs {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
+  justify-content: space-between;
   @include media(">tablet") { flex-wrap: nowrap; }
   > li {
     width: 100%;

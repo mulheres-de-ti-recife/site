@@ -23,18 +23,18 @@ main {
 .grid {
   &.aside {
     @include media(">notebook") {
+      position: fixed;
       width: $aside-width;
       height: 100%;
-      position: fixed;
     }
   }
   &.content {
+    position: relative;
     box-sizing: border-box;
+    max-width: 60rem;
     padding-right: 1rem;
     padding-left: 1rem;
-    max-width: 60rem;
     margin: 0 auto;
-    position: relative;
     @include media(">tablet") {
       padding-right: $gutter-tablet;
       padding-left: $gutter-tablet;
