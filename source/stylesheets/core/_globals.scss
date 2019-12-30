@@ -1,0 +1,19 @@
+///////////////////////////////////////////////////////////
+// Global HTML & classes                    (Core block) //
+///////////////////////////////////////////////////////////
+
+* { outline: none; }
+body { margin: 0; }
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+hr {
+  width: 100%;
+  margin: 0 0 1.1rem;
+  border-color: $purple;
+  opacity: .1;
+}

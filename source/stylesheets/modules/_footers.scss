@@ -1,0 +1,37 @@
+///////////////////////////////////////////////////////////
+// Footers                                      (Module) //
+///////////////////////////////////////////////////////////
+
+footer {
+  margin: $gutter-medium 0;
+  @include media(">notebook") {
+    padding: $gutter-big 0 $gutter-medium;
+    margin: 0;
+    background-color: transparentize($gray-light, .7);
+  }
+  hr {
+    @include media("<notebook") { display: none; }
+  }
+  article {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: calc(100% - 2.5rem);
+  }
+  p {
+    width: 90%;
+    @include media(">notebook") { width: 70%; }
+  }
+  img {
+    @include media("<tablet") {
+      position: absolute;
+      top: $gutter-medium;
+      right: $gutter-medium;
+    }
+  }
+  .content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
