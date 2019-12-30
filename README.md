@@ -1,5 +1,4 @@
 # Mulheres de T.I. em Recife
-
 Campanha feita por mulheres dos studios de software em Recife: Guava, Labcodes e Vinta.
 
 ## Setup de desenvolvimento
