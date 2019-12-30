@@ -42,6 +42,9 @@ function scrollListener() {
   links.forEach((linkElement) => {
     if (linkElement.dataset.targetSection === id) linkElement.classList.add('active')
     else linkElement.classList.remove('active')
+
+    var asideElement = document.querySelector('body');
+    asideElement.classList.remove('menu-is-open');
   })
 }
 
