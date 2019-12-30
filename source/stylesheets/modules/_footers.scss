@@ -4,7 +4,11 @@
 
 footer {
   margin: $gutter-medium 0;
-  @include media(">notebook") { margin: $gutter-big 0 $gutter-medium; }
+  @include media(">notebook") {
+    padding: $gutter-big 0 $gutter-medium;
+    margin: 0;
+    background-color: transparentize($gray-light, .7);
+  }
   hr {
     @include media("<notebook") { display: none; }
   }
