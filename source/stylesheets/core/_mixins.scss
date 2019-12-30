@@ -2,12 +2,6 @@
 // Mixins & functions                       (Core block) //
 ///////////////////////////////////////////////////////////
 
-// Px to rem.
-@function rem($size) {
-  $rem: $size / 15px;
-  @return #{$rem}rem;
-}
-
 // Clear fix wizardry.
 @mixin clearfix {
   &::after {
@@ -39,15 +33,9 @@
   border: 0;
   margin: 0;
   padding: 0;
+  top: 0;
+  width: 0;
+  height: 0;
 }
 
-// Show hidden typography.
-@mixin fontful {
-  position: static;
-  clip: none;
-  white-space: normal;
-}
-
-@mixin transition($type: all, $time: .2s) {
-  transition: $type $time ease-in-out;
-}
+@mixin transition($type: all, $time: .2s) { transition: $type $time ease-in-out; }
