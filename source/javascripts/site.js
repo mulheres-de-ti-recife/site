@@ -49,11 +49,9 @@ function scrollListener() {
 function addClickBehaviorToMenuLinks() {
   links.forEach((link) => link.addEventListener('click', (event) => {
     event.preventDefault()
-    console.log('cu')
     const id = link.dataset.targetSection
     const section = document.getElementById(id)
 
-    console.log({ id, section})
     section.scrollIntoView({ behavior: 'smooth' })
   }))
 }
