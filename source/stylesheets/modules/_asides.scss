@@ -22,6 +22,7 @@ aside {
     padding: 3.6rem $gutter-medium 0;
     background-color: $white;
   }
+  h1 { @include fontless; }
   img { display: block; }
   header {
     position: relative;
