@@ -2,9 +2,15 @@
 Campanha feita por mulheres dos studios de software em Recife: Guava, Labcodes e Vinta.
 
 ## Setup de desenvolvimento
-### Instalar o Xcode
+### Instalar o Xcode Command Line Tools
 O Middleman possui algumas dependêndias que precisam do Xcode instalado. Você pode instalá-lo pelo terminal:
 `xcode-select --install`
+
+### Instalar o Ruby
+Caso você não tenha o Ruby instalado no seu computador, vamos usar o [RVM](http://rvm.io) para instalar:
+1. Digite isso no terminal: `curl -sSL https://get.rvm.io | bash -s stable`
+2. Instale a última versão do ruby: `rvm install ruby`
+
 ### Instalar o Middleman
 1. Adicionar a gem do Middleman `gem install middleman`
 2. Rodar `bundle`
