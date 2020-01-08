@@ -1,0 +1,46 @@
+///////////////////////////////////////////////////////////
+// Scale & measurements                     (Core block) //
+///////////////////////////////////////////////////////////
+
+// Base size (1rem)
+$base:      20px;
+
+$size: (
+  big:      1.7rem, // 34
+  medium:   1.4rem, // 28
+  base:     $base,  // 20
+  regular:  .9rem,  // 18
+  small:    .8rem,  // 16
+  smaller:  .7rem,  // 14
+);
+
+@function size($size-number: regular) { @return map-get($size, $size-number); }
+@function size-alt($size-number: regular) { @return map-get($size-alt, $size-number); }
+
+
+// Gutters
+$gutter-huge:        8rem;              // 160
+$gutter-biggest:     5rem;              // 100
+$gutter-bigger:      size(base) * 3;    //  60
+$gutter-big:         size(base) * 2;    //  40
+$gutter-medium:      1.5rem;            //  30
+$gutter-regular:     size(base) * 1.25; //  25
+$gutter-small-alt:   .6rem;             //  12
+$gutter-small:       size(base) / 2;    //  10
+$gutter-tiny:        size(base) / 5;    //   4
+
+// Semantic gutters
+$gutter-mobile:      .75rem;
+$gutter-tablet:      1.6rem;
+$gutter-notebook:    $gutter-big;
+
+// Breakpoints
+$breakpoints: (
+  "phone":     320px,
+  "phablet":   570px,
+  "tablet":    767px,
+  "notebook":  1023px,
+  "desktop":   1279px,
+  "large":     1439px,
+  "huge":      1599px,
+);

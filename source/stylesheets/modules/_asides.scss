@@ -1,0 +1,73 @@
+///////////////////////////////////////////////////////////
+// Asides                                       (Module) //
+///////////////////////////////////////////////////////////
+
+body.menu-is-open {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  @include media("<notebook") {
+    aside ul { display: block; }
+    aside, main { transform: translateX(-#{$aside-width}); }
+    header { overflow: visible; }
+  }
+}
+
+aside {
+  @include transition(transform);
+  box-sizing: border-box;
+  padding: $gutter-medium;
+  @include media(">tablet") { padding: $gutter-regular calc(#{$gutter-tablet} * 2); }
+  @include media(">notebook") {
+    padding: 3.6rem $gutter-medium 0;
+    background-color: $white;
+  }
+  h1 { @include fontless; }
+  img { display: block; }
+  header {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    @include media(">notebook") { justify-content: flex-end; }
+  }
+  ul {
+    display: none;
+    margin-top: $gutter-medium;
+    text-align: right;
+    @include media("<notebook") {
+      position: absolute;
+      right: -15.5rem;
+      box-sizing: border-box;
+      width: $aside-width;
+      padding: 0 .5rem;
+      margin-top: $gutter-huge;
+      text-align: left;
+    }
+    @include media(">tablet") { right: -16.5rem; }
+    @include media(">notebook") { display: block; }
+  }
+  li {
+    margin-bottom: $gutter-medium;
+    @include media(">notebook") { margin-bottom: $gutter-small-alt; }
+    &:nth-child(2) a { width: calc(100% - 1rem); }
+  }
+  a {
+    position: relative;
+    text-align: left;
+    @include media(">notebook") { text-align: right; }
+    img {
+      @include transition;
+      position: absolute;
+      top: 50%;
+      left: -1rem;
+      margin-top: -.9rem;
+      opacity: 0;
+    }
+    &:hover img,
+    &:active img,
+    &.active img { opacity: 1; }
+  }
+}

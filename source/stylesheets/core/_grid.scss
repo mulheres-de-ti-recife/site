@@ -1,0 +1,51 @@
+///////////////////////////////////////////////////////////
+// Grid                                     (Core block) //
+///////////////////////////////////////////////////////////
+
+$aside-width: 14rem;
+
+body {
+  @include transition;
+  background-color: $yellow;
+  @include media(">notebook") {
+    min-width: 50rem;
+    background-color: $white;
+  }
+}
+
+main {
+  @include transition(transform);
+  padding: 0 .75rem;
+  @include media(">tablet") { padding: 0 $gutter-tablet; }
+  @include media(">notebook") { padding: 0; }
+}
+
+.grid {
+  &.aside {
+    @include media(">notebook") {
+      position: fixed;
+      width: $aside-width;
+      height: 100%;
+    }
+  }
+  &.content {
+    position: relative;
+    box-sizing: border-box;
+    max-width: 60rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    margin: 0 auto;
+    @include media(">tablet") {
+      padding-right: $gutter-tablet;
+      padding-left: $gutter-tablet;
+    }
+    @include media(">notebook") {
+      padding-right: $gutter-notebook;
+      padding-left: $gutter-notebook;
+    }
+  }
+  &.wrapper {
+    @include media(">notebook") { margin-left: $aside-width; }
+  }
+}
+

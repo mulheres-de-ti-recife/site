@@ -1,0 +1,95 @@
+///////////////////////////////////////////////////////////
+// Typography                               (Core block) //
+///////////////////////////////////////////////////////////
+
+// Font scaffold //////////////////////////////////////////
+
+// Weights
+$normal:       normal;
+$regular:      $normal;
+$medium:       500;
+$bold:         700;
+
+// Font system ////////////////////////////////////////////
+
+html,
+body {
+  color: $purple;
+  font-family: 'Rubik', sans-serif;
+  font-size: size(base);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font-family: 'Rubik', sans-serif; }
+
+// Title
+h1, h2, h3, p {
+  padding: 0;
+  margin: 0;
+}
+h2 {
+  margin-bottom: $gutter-regular;
+  font-size: 1.3rem;
+  &.has-highlight { line-height: 1.8rem; }
+  @include media(">tablet") {
+    margin-bottom: $gutter-regular;
+    font-size: size(big);
+    &.has-highlight { line-height: 2.4rem; }
+  }
+}
+h3 {
+  width: 100%;
+  margin-bottom: $gutter-small-alt;
+  font-size: 1.2rem;
+  @include media(">tablet") {
+    margin-bottom: $gutter-regular;
+    font-size: size(medium);
+  }
+}
+h4 {
+  margin-top: 0;
+  margin-bottom: $gutter-small;
+  font-size: size(small);
+  letter-spacing: 1.33px;
+  text-transform: uppercase;
+}
+
+// Paragraph
+p {
+  font-size: size(regular);
+  line-height: 25px;
+  @include media(">notebook") {
+    font-size: size(small);
+    line-height: 1.1rem;
+  }
+  &.bigger {
+    font-size: size(regular);
+    line-height: 25px;
+  }
+}
+strong { font-weight: $bold; }
+
+// Link
+a, .link {
+  @include transition;
+  color: $purple;
+  font-weight: $medium;
+  font-size: size(base);
+  text-decoration: none;
+  @include media(">notebook") { font-size: size(small); }
+}
+
+.link {
+  display: inline-block;
+  &:hover, &:active, &.active { text-shadow: 0 0 .5px currentColor, 0 0 .5px currentColor; }
+}
+
+// Small texts
+small {
+  display: block;
+  font-style: italic;
+  font-size: size(smaller);
+}
+
+.highlighted-text { background-color: $white; }

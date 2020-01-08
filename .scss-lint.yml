@@ -1,0 +1,469 @@
+# Default application configuration that all configurations inherit from.
+scss_files:
+  - "**/*.scss"
+  - "docs/assets/scss/**/*.scss"
+
+plugin_directories: ['.scss-linters']
+
+# List of gem names to load custom linters from (make sure they are already
+# installed)
+plugin_gems: []
+
+# Default severity of all linters.
+severity: warning
+
+linters:
+  BangFormat:
+    enabled: true
+    space_before_bang: true
+    space_after_bang: false
+
+  BemDepth:
+    enabled: false
+    max_elements: 1
+
+  BorderZero:
+    enabled: true
+    convention: zero # or `none`
+
+  ChainedClasses:
+    enabled: false
+
+  ColorKeyword:
+    enabled: true
+
+  ColorVariable:
+    enabled: false
+
+  Comment:
+    enabled: true
+    exclude:
+      - syntacss.scss
+      - application.scss
+    style: silent
+
+  DebugStatement:
+    enabled: true
+
+  DeclarationOrder:
+    enabled: false
+
+  DisableLinterReason:
+    enabled: false
+
+  DuplicateProperty:
+    enabled: true
+
+  ElsePlacement:
+    enabled: true
+    style: same_line # or 'new_line'
+
+  EmptyLineBetweenBlocks:
+    enabled: false
+    ignore_single_line_blocks: true
+
+  EmptyRule:
+    enabled: false
+
+  ExtendDirective:
+    enabled: false
+
+  FinalNewline:
+    enabled: true
+    present: true
+
+  HexLength:
+    enabled: true
+    style: short # or 'long'
+
+  HexNotation:
+    enabled: true
+    style: lowercase # or 'uppercase'
+
+  HexValidation:
+    enabled: true
+
+  IdSelector:
+    enabled: true
+
+  ImportantRule:
+    enabled: false
+
+  ImportPath:
+    enabled: true
+    leading_underscore: false
+    filename_extension: false
+
+  Indentation:
+    enabled: true
+    allow_non_nested_indentation: false
+    character: space # or 'tab'
+    width: 2
+
+  LeadingZero:
+    enabled: true
+    style: exclude_zero # or 'include_zero'
+
+  MergeableSelector:
+    enabled: false
+    force_nesting: true
+
+  NameFormat:
+    enabled: true
+    allow_leading_underscore: true
+    convention: hyphenated_lowercase # or 'camel_case', or 'snake_case', or a regex pattern
+
+  NestingDepth:
+    enabled: true
+    max_depth: 5
+    ignore_parent_selectors: false
+
+  PlaceholderInExtend:
+    enabled: false
+
+  PropertyCount:
+    enabled: false
+    include_nested: false
+    max_properties: 10
+
+  PropertySortOrder:
+    enabled: true
+    ignore_unspecified: false
+    min_properties: 2
+    separate_groups: false
+    order:
+      - position
+      - top
+      - right
+      - bottom
+      - left
+      - z-index
+      - box-sizing
+      - display
+      - flex
+      - flex-align
+      - flex-basis
+      - flex-direction
+      - flex-wrap
+      - flex-flow
+      - flex-grow
+      - flex-shrink
+      - flex-order
+      - flex-pack
+      - align-items
+      - align-content
+      - justify-content
+      - grid
+      - grid-area
+      - grid-template
+      - grid-template-areas
+      - grid-template-columns
+      - grid-template-rows
+      - grid-auto-flow
+      - grid-auto-rows
+      - grid-gap
+      - grid-row-gap
+      - grid-column-gap
+      - grid-column
+      - grid-column-start
+      - grid-column-end
+      - grid-row
+      - grid-row-start
+      - grid-row-end
+      - columns
+      - column-count
+      - column-fill
+      - column-gap
+      - column-rule
+      - column-span
+      - column-width
+      - column-break-inside
+      - justify-items
+      - place-self
+      - place-items
+      - place-content
+      - align-self
+      - justify-self
+      - float
+      - width
+      - min-width
+      - max-width
+      - height
+      - min-height
+      - max-height
+      - padding
+      - padding-top
+      - padding-right
+      - padding-bottom
+      - padding-left
+      - margin
+      - margin-top
+      - margin-right
+      - margin-bottom
+      - margin-left
+      - overflow
+      - overflow-x
+      - overflow-y
+      - overscroll-behavior
+      - overflow-scrolling
+      - -webkit-overflow-scrolling
+      - scroll-padding
+      - scroll-snap-type
+      - scroll-snap-align
+      - scroll-snap-stop
+      - scroll-snap-points-y
+      - scroll-snap-points-x
+      - clip
+      - clear
+      - color
+      - font
+      - font-family
+      - font-style
+      - font-weight
+      - font-variant
+      - font-size
+      - font-size-adjust
+      - font-stretch
+      - font-effect
+      - font-feature-settings
+      - font-emphasize
+      - font-emphasize-position
+      - font-emphasize-style
+      - line-height
+      - letter-spacing
+      - hyphens
+      - text-align
+      - text-align-last
+      - text-emphasis
+      - text-emphasis-color
+      - text-emphasis-style
+      - text-emphasis-position
+      - text-decoration
+      - text-indent
+      - text-justify
+      - text-outline
+      - text-overflow
+      - text-overflow-ellipsis
+      - text-overflow-mode
+      - text-shadow
+      - text-transform
+      - text-wrap
+      - word-break
+      - word-spacing
+      - word-wrap
+      - overflow-wrap
+      - tab-size
+      - white-space
+      - vertical-align
+      - list-style
+      - list-style-position
+      - list-style-type
+      - list-style-image
+      - pointer-events
+      - touch-action
+      - appearance
+      - cursor
+      - background
+      - background-color
+      - background-image
+      - background-repeat
+      - background-attachment
+      - background-position
+      - background-position-x
+      - background-position-y
+      - background-clip
+      - background-origin
+      - background-size
+      - border
+      - border-color
+      - border-collapse
+      - border-spacing
+      - border-style
+      - border-width
+      - border-top
+      - border-top-color
+      - border-top-style
+      - border-top-width
+      - border-right
+      - border-right-color
+      - border-right-style
+      - border-right-width
+      - border-bottom
+      - border-bottom-color
+      - border-bottom-style
+      - border-bottom-width
+      - border-left
+      - border-left-color
+      - border-left-style
+      - border-left-width
+      - border-radius
+      - border-top-left-radius
+      - border-top-right-radius
+      - border-bottom-right-radius
+      - border-bottom-left-radius
+      - border-image
+      - border-image-source
+      - border-image-slice
+      - border-image-width
+      - border-image-outset
+      - border-image-repeat
+      - box-shadow
+      - outline
+      - outline-width
+      - outline-style
+      - outline-color
+      - outline-offset
+      - caption-side
+      - content
+      - counter-increment
+      - counter-reset
+      - empty-cells
+      - filter
+      - nav-down
+      - nav-index
+      - nav-left
+      - nav-right
+      - nav-up
+      - opacity
+      - quotes
+      - resize
+      - table-layout
+      - user-select
+      - visibility
+      - zoom
+      - transition
+      - transition-delay
+      - transition-timing-function
+      - transition-duration
+      - transition-property
+      - transform
+      - transform-origin
+      - animation
+      - animation-name
+      - animation-duration
+      - animation-play-state
+      - animation-timing-function
+      - animation-delay
+      - animation-iteration-count
+      - direction
+      - marks
+      - page
+      - font-smoothing
+
+  PropertySpelling:
+    enabled: true
+    extra_properties: []
+    disabled_properties: []
+
+  PropertyUnits:
+    enabled: true
+    global: [
+      'ch', 'em', 'ex', 'rem',                 # Font-relative lengths
+      'cm', 'in', 'mm', 'pc', 'pt', 'px', 'q', # Absolute lengths
+      'vh', 'vw', 'vmin', 'vmax',              # Viewport-percentage lengths
+      'fr',                                    # Grid fraction
+      'deg', 'grad', 'rad', 'turn',            # Angle
+      'ms', 's',                               # Duration
+      'Hz', 'kHz',                             # Frequency
+      'dpi', 'dpcm', 'dppx',                   # Resolution
+      '%']                                     # Other
+    properties: {}
+
+  PseudoElement:
+    enabled: true
+
+  QualifyingElement:
+    enabled: true
+    allow_element_with_attribute: true
+    allow_element_with_class: true
+    allow_element_with_id: true
+
+  SelectorDepth:
+    enabled: true
+    max_depth: 4
+
+  SelectorFormat:
+    enabled: false
+    convention: hyphenated_lowercase # or 'strict_BEM', or 'hyphenated_BEM', or 'snake_case', or 'camel_case', or a regex pattern
+
+  Shorthand:
+    enabled: true
+    allowed_shorthands: [1, 2, 3, 4]
+
+  SingleLinePerProperty:
+    enabled: false
+    allow_single_line_rule_sets: true
+
+  SingleLinePerSelector:
+    enabled: false
+
+  SpaceAfterComma:
+    enabled: false
+    style: one_space # or 'no_space', or 'at_least_one_space'
+
+  SpaceAfterPropertyColon:
+    enabled: true
+    style: at_least_one_space # or 'no_space', or 'at_least_one_space', or 'aligned'
+
+  SpaceAfterPropertyName:
+    enabled: true
+
+  SpaceAfterVariableName:
+    enabled: true
+
+  SpaceAroundOperator:
+    enabled: true
+    style: one_space # or 'at_least_one_space', or 'no_space'
+
+  SpaceBeforeBrace:
+    enabled: true
+    style: space # or 'new_line'
+    allow_single_line_padding: true
+
+  SpaceBetweenParens:
+    enabled: true
+    spaces: 0
+
+  StringQuotes:
+    enabled: true
+    style: double_quotes # or double_quotes
+
+  TrailingSemicolon:
+    enabled: true
+
+  TrailingWhitespace:
+    enabled: true
+
+  TrailingZero:
+    enabled: false
+
+  TransitionAll:
+    enabled: false
+
+  UnnecessaryMantissa:
+    enabled: true
+
+  UnnecessaryParentReference:
+    enabled: true
+
+  UrlFormat:
+    enabled: true
+
+  UrlQuotes:
+    enabled: true
+
+  VariableForProperty:
+    enabled: false
+    properties: []
+
+  VendorPrefix:
+    enabled: true
+    identifier_list: base
+    additional_identifiers: []
+    excluded_identifiers: []
+
+  ZeroUnit:
+    enabled: true
+
+  Compass::*:
+    enabled: false

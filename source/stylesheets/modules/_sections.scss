@@ -1,0 +1,162 @@
+///////////////////////////////////////////////////////////
+// Sections                                     (Module) //
+///////////////////////////////////////////////////////////
+
+.section {
+  padding: $gutter-medium 0 $gutter-big;
+  margin-bottom: .75rem;
+  @include media(">tablet") {
+    padding: 2rem 0 2.5rem;
+    margin-bottom: $gutter-tablet;
+  }
+  @include media(">notebook") {
+    padding: $gutter-bigger 0;
+    margin-bottom: 0;
+  }
+  h2, p {
+    max-width: 40rem;
+    @include media(">huge") { max-width: 50rem; }
+  }
+
+  // Project section
+  &.project {
+    @include media("<notebook") {
+      background-color: $white;
+      .highlighted-text { background-color: $yellow; }
+    }
+    @include media(">notebook") { padding-bottom: 4rem; }
+    article { position: relative; }
+    h2 {
+      margin-bottom: $gutter-bigger;
+      @include media(">desktop") { margin-bottom: $gutter-huge; }
+    }
+    img {
+      margin-bottom: 1rem;
+      @include media(">desktop") {
+        position: absolute;
+        right: 1rem;
+        bottom: -$gutter-medium;
+        margin-bottom: 0;
+      }
+    }
+    .divisor-line {
+      display: block;
+      width: $gutter-big;
+      height: .15rem;
+      margin-bottom: $gutter-medium;
+      background-color: $white;
+      @include media("<tablet") { background-color: $yellow; }
+    }
+  }
+
+  // Brochure section
+  &.brochure {
+    img {
+      display: block;
+      margin: $gutter-medium 0;
+      @include media(">tablet") { margin: $gutter-bigger 4rem $gutter-bigger 0; }
+    }
+    .button {
+      @include media("<tablet") { margin-bottom: 2rem; }
+    }
+    .content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+  }
+
+  // Research section
+  &.research {
+    img.progress {
+      padding: $gutter-medium 0;
+      @include media(">tablet") { padding: $gutter-big 0 $gutter-bigger; }
+    }
+
+    .scope {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-start;
+      ul {
+        box-sizing: border-box;
+        @include media(">tablet") {
+          width: calc(90% - 142px);
+          padding-right: 2rem;
+        }
+      }
+    }
+
+    .button { margin: 0 auto; }
+
+    @include media("<tablet") {
+      .results > p { padding-bottom: 1.5rem; }
+    }
+
+    @include media(">tablet") {
+      .results ul { margin: 1rem 0 2rem; }
+      .results li:first-child { text-align: right; }
+    }
+  }
+
+  // Know-more section
+  &.know-more {
+    padding-bottom: $gutter-small;
+    background-color: $white;
+    @include media(">notebook") { background-color: transparentize($gray-light, .7); }
+    .logos {
+      display: flex;
+      align-items: center;
+      width: calc(100% - 1rem);
+      margin-top: .8rem;
+      @include media(">tablet") { margin: 1rem 0 $gutter-big; }
+      li {
+        &:first-child { margin-top: $gutter-small; }
+        &:not(:first-child) {
+          padding-left: .9rem;
+          @include media(">tablet") { padding-left: 2rem; }
+        }
+      }
+    }
+    .logo {
+      width: 100%;
+      opacity: .8;
+      a { font-size: 0; }
+    }
+  }
+}
+
+// Subsection
+.subsection {
+  position: relative;
+  padding-top: 2rem;
+}
+
+// Bullet points
+.bullet-points {
+  padding-left: 1rem;
+  font-size: size(regular);
+  line-height: 25px;
+  list-style: disc;
+  li { margin-bottom: 1rem; }
+}
+
+// Paragraphs
+.paragraphs-wrapper {
+  max-width: 45rem;
+  @include media(">notebook") { width: 90%; }
+}
+
+.paragraphs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @include media(">tablet") { flex-wrap: nowrap; }
+  > li {
+    width: 100%;
+    @include media("<tablet") { padding-bottom: $gutter-medium; }
+    &:not(:first-child) {
+      @include media(">tablet") { padding: 0 0 0 2rem; }
+    }
+  }
+}

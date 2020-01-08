@@ -1,0 +1,24 @@
+///////////////////////////////////////////////////////////
+// Colors                                   (Core block) //
+///////////////////////////////////////////////////////////
+
+// Palette ////////////////////////////////////////////////
+
+$yellow:                #fcc859;
+$purple:                #351b4c;
+$pink:                  #f15f5c;
+$white:                 #fff;
+
+$gray:                  #9b9b9b;
+$gray-light:            #f2f2f2;
+
+.is-yellow { background-color: $yellow; }
+.is-purple {
+  color: $white;
+  background-color: $purple;
+  h2, h3 { color: $yellow; }
+}
+.is-gray {
+  color: $purple;
+  background-color: $gray-light;
+}
